@@ -1,91 +1,124 @@
-{% extends "layout.html" %}
-{% block content %}
-            <form action="/agrega_socio" method="post">
-              <div class="form-row">
-                  <label for="nom_socio">Nombre</label>
-              </div>
-              <div class="form-row">
+{% extends "layout.html" %} {% block content %}
+<form action="/agrega_socio" method="post">
+  <div class="form-row">
+    <label for="nom_socio">Nombre</label>
+  </div>
+  <div class="form-row">
+    <div class="col">
+      <input
+        type="text"
+        class="form-control"
+        name="nom_socio"
+        id="nom_socio"
+        placeholder="Nombre"
+      />
+    </div>
+  </div>
+  <div class="form-row">
+    <label for="tel">Contacto</label>
+  </div>
+  <div class="form-row">
+    <div class="col">
+      <input
+        type="text"
+        class="form-control"
+        name="tel"
+        id="tel"
+        placeholder="495-999-99999"
+      />
+    </div>
+    <div class="col">
+      <input
+        type="email"
+        class="form-control"
+        name="correoe"
+        id="correoe"
+        placeholder="email@serv.com"
+      />
+    </div>
+  </div>
 
-                <div class="col">
-                    <input type="text" class="form-control" name="nom_socio" id="nom_socio" placeholder="Nombre">
-                </div>
+  <div class="form-group">
+    <label for="direccion">Dirección</label>
+    <input
+      type="text"
+      class="form-control"
+      name="direccion"
+      id="direccion"
+      placeholder="Calle y número"
+    />
+  </div>
+  
+  <div class="form-group">
+    <label for="colonia">Colonia</label>
+    <input
+      type="text"
+      class="form-control"
+      name="colonia"
+      id="colonia"
+      placeholder="Colonia"
+    />
+  </div>
 
-              </div>
-              <div class="form-row">
-                  <label for="tel">Contacto</label>
-              </div>
-              <div class="form-row">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="ciudad">Ciudad</label>
+      <input
+        type="text"
+        class="form-control"
+        name="ciudad"
+        id="ciudad"
+        placeholder="Ciudad"
+      />
+    </div>
+    <div class="form-group col-md-4">
+      <label for="estado">Estado</label>
+      <select name="estado" id="estado" class="form-control">
+        <option selected>Choose...</option>
+        <option>Aguascalientes</option>
+        <option>Baja California</option>
+        <option>Baja California Sur</option>
+        <option>Campeche</option>
+        <option>Coahuila</option>
+        <option>Colima</option>
+        <option>Chiapas</option>
+        <option>Ciudad de México</option>
+        <option>Durango</option>
+        <option>Guanajuato</option>
+        <option>Guerrero</option>
+        <option>Hidalgo</option>
+        <option>Jalisco</option>
+        <option>México</option>
+        <option>Michaocan</option>
+        <option>Morelos</option>
+        <option>Nayarit</option>
+        <option>Nuevo León</option>
+        <option>Oaxaca</option>
+        <option>Puebla</option>
+        <option>Queretaro</option>
+        <option>Quintana Roo</option>
+        <option>San Luis Potosi</option>
+        <option>Sinaloa</option>
+        <option>Sonora</option>
+        <option>Tabasco</option>
+        <option>Tamaulipas</option>
+        <option>Tlaxcala</option>
+        <option>Veracruz</option>
+        <option>Yucatan</option>
+        <option>Zacatecas</option>
+      </select>
+    </div>
+    <div class="form-group col-md-2">
+      <label for="codpos">Codigo Postal</label>
+      <input type="text" class="form-control" name="codpos" id="codpos" />
+    </div>
+    <div class="form-group col-md-2">
+      <label for="miembro">Miembro desde</label>
+      <input type="date" class="form-control" name="miembro" id="miembro" />
+    </div>
+  </div>
 
-                  <div class="col">
-                        <input type="text" class="form-control" name="tel" id="tel" placeholder="495-999-99999">
-                  </div>
-                  <div class="col">
-                        <input type="email" class="form-control" name="correoe" id="correoe" placeholder="email@serv.com">
-                  </div>
-              </div>
-              <div class="form-group">
-                <label for="direccion">Dirección</label>
-                <input type="text" class="form-control" name="direccion" id="direccion" placeholder="Calle y número">
-              </div>
-              <div class="form-group">
-                <label for="colonia">Colonia</label>
-                <input type="text" class="form-control" name="colonia" id="colonia" placeholder="Colonia">
-              </div>
-
-
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label for="ciudad">Ciudad</label>
-                  <input type="text" class="form-control" name="ciudad" id="ciudad" placeholder="Ciudad">
-                </div>
-                <div class="form-group col-md-4">
-                  <label for="estado">Estado</label>
-                  <select name="estado" id="estado" class="form-control">
-                      <option selected>Choose...</option>
-                      <option>Aguascalientes</option>
-                      <option>Baja California</option>
-                      <option>Baja California Sur</option>
-                      <option>Campeche</option>
-                      <option>Coahuila</option>
-                      <option>Colima</option>
-                      <option>Chiapas</option>
-                      <option>Ciudad de México</option>
-                      <option>Durango</option>
-                      <option>Guanajuato</option>
-                      <option>Guerrero</option>
-                      <option>Hidalgo</option>
-                      <option>Jalisco</option>
-                      <option>México</option>
-                      <option>Michaocan</option>
-                      <option>Morelos</option>
-                      <option>Nayarit</option>
-                      <option>Nuevo León</option>
-                      <option>Oaxaca</option>
-                      <option>Puebla</option>
-                      <option>Queretaro</option>
-                      <option>Quintana Roo</option>
-                      <option>San Luis Potosi</option>
-                      <option>Sinaloa</option>
-                      <option>Sonora</option>
-                      <option>Tabasco</option>
-                      <option>Tamaulipas</option>
-                      <option>Tlaxcala</option>
-                      <option>Veracruz</option>
-                      <option>Yucatan</option>
-                      <option>Zacatecas</option>
-                  </select>
-                </div>
-                <div class="form-group col-md-2">
-                  <label for="codpos">Codigo Postal</label>
-                  <input type="text" class="form-control" name="codpos" id="codpos">
-                </div>
-                <div class="form-group col-md-2">
-                  <label for="miembro">Miembro desde</label>
-                  <input type="date" class="form-control" name="miembro" id="miembro">
-                </div>
-              </div>
-
-              <button type="submit" class="btn btn-primary">Agrega</button>
-            </form>
+  <button type="submit" class="btn btn-primary">Agrega</button>
+</form>
 
 {% endblock %}
