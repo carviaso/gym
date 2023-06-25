@@ -1,7 +1,14 @@
 # Gym
+## Start
+```
+pythom -m venv env
+.\env\Scripts\activate
+```
 
 ## Requrimientos
 ```
+pythom -m venv env
+
 pip install pysqlite
 pip install Flask
 ```
