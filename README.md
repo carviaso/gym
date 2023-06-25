@@ -3,6 +3,7 @@
 ## Requrimientos
 ```
 pip install pysqlite
+pip install Flask
 ```
 
 ## Backup Requiriments
@@ -29,3 +30,7 @@ python init_db.py
 ``` 
 python hola.py
 ```
+
+# Informacion
+
+Para informacion de [How To Use an SQLite Database in a Flask Application](https://www.digitalocean.com/community/tutorials/how-to-use-an-sqlite-database-in-a-flask-application)
