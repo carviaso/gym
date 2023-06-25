@@ -19,3 +19,13 @@ pip install -U -r requirements.txt
 ```
 powershell -c "pip freeze  | %{$_.split('==')[0]} | %{pip install --upgrade $_}"
 ```
+
+## Iniciar la BD
+```
+python init_db.py
+```
+
+## Ejecutar el app
+``` 
+python hola.py
+```
